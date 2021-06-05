@@ -8,11 +8,23 @@ from numpy import right_shift
 myColor = "#3DD393"
 
 def openMap():
-    print("var1",var1.get())
+    print("var1",var1.get(),"var2",var2.get())
 
 def zupa():
     print("select")
-   
+    if var1.get() == 1:
+        cleverCheck.config(state="disabled")
+        teslaCheck.config(state='disabled')
+        ionityCheck.config(state='disabled')
+        spertoCheck.config(state='disabled')
+        eonCheck.config(state="disabled")
+    else:
+        cleverCheck.config(state="normal")
+        teslaCheck.config(state="normal")
+        ionityCheck.config(state="normal")
+        spertoCheck.config(state="normal")
+        eonCheck.config(state="normal")
+
 window = tk.Tk()
 window.title("reCharge")
 
@@ -33,23 +45,24 @@ mapShowText.set("Show Map")
 showMapButton.grid(column= 1, row = 5, sticky= 'en')
 
 var1 = tk.IntVar()
-tk.Checkbutton(window,text="Show all chargers", variable=var1,background=myColor, command=lambda:zupa()).grid(row=0,column=0, sticky= 'w')
-
+checkbuton=  tk.Checkbutton(window,text="Show all chargers providers", variable=var1,background=myColor, command=lambda:zupa())
+checkbuton.grid(row=0,column=0, sticky= 'w')
+checkbuton.select()
 var2 = tk.IntVar()
-tk.Checkbutton(window,text="Show Clever chargers", variable=var2,background=myColor,).grid(row=1, sticky= 'w')
-
+cleverCheck = tk.Checkbutton(window,text="Show Clever chargers",state="disabled", variable=var2,background=myColor,)
+cleverCheck.grid(row=1, sticky= 'w')
 var3 = tk.IntVar()
-tk.Checkbutton(window,text="Show Tesla chargers", variable=var3,background=myColor).grid(row=2, sticky= 'w')
-
+teslaCheck = tk.Checkbutton(window,text="Show Tesla chargers",state="disabled", variable=var3,background=myColor)
+teslaCheck.grid(row=2, sticky= 'w')
 var4 = tk.IntVar()
-tk.Checkbutton(window,text="Show Ionity chargers", variable=var4,background=myColor).grid(row=3, sticky= 'w')
-
+ionityCheck=tk.Checkbutton(window,text="Show Ionity chargers", state="disabled",variable=var4,background=myColor)
+ionityCheck.grid(row=3, sticky= 'w')
 var5 = tk.IntVar()
-tk.Checkbutton(window,text="Show Sperto chargers", variable=var5,background=myColor).grid(row=4, sticky= 'w')
-
+spertoCheck=tk.Checkbutton(window,text="Show Sperto chargers", state="disabled",variable=var5,background=myColor)
+spertoCheck.grid(row=4, sticky= 'w')
 var6 = tk.IntVar()
-tk.Checkbutton(window,text="Show E-on chargers", variable=var6,background=myColor).grid(row=5, sticky= 'w')
-
+eonCheck = tk.Checkbutton(window,text="Show E-on chargers",state="disabled", variable=var6,background=myColor)
+eonCheck.grid(row=5, sticky= 'w')
 var7 = tk.IntVar()
 tk.Checkbutton(window,text="Show E-on chargers", variable=var7,background=myColor).grid(row=0, column= 5, sticky= 'w')
 
