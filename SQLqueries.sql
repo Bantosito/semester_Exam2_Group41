@@ -1,9 +1,6 @@
---It's a 1 to 1 export from our database which consists of many different files we created 
+#Its a 1 to 1 export from our database which consists of many different files we created 
 
-
-
-CREATE DATABASE  IF NOT EXISTS `reCharge` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `reCharge`;
+CREATE DATABASE recharge;
 -- MySQL dump 10.13  Distrib 8.0.22, for macos10.15 (x86_64)
 --
 -- Host: localhost    Database: reCharge
@@ -40,15 +37,6 @@ CREATE TABLE `car` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `car`
---
-
-LOCK TABLES `car` WRITE;
-/*!40000 ALTER TABLE `car` DISABLE KEYS */;
-/*!40000 ALTER TABLE `car` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `chargings`
 --
 
@@ -72,15 +60,6 @@ CREATE TABLE `chargings` (
   CONSTRAINT `chargings_ibfk_2` FOREIGN KEY (`IDcar`) REFERENCES `car` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `chargings`
---
-
-LOCK TABLES `chargings` WRITE;
-/*!40000 ALTER TABLE `chargings` DISABLE KEYS */;
-/*!40000 ALTER TABLE `chargings` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `chargingStations`
@@ -166,22 +145,13 @@ DROP TABLE IF EXISTS `creditCard`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `creditCard` (
   `ID` int NOT NULL,
-  `number` int DEFAULT NULL,
+  `number` varchar(30) DEFAULT NULL,
   `owner` int DEFAULT NULL,
-  `expDate` text DEFAULT NULL,
+  `expDate` varchar(15) DEFAULT NULL,
   `ccv` int DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `creditCard`
---
-
-LOCK TABLES `creditCard` WRITE;
-/*!40000 ALTER TABLE `creditCard` DISABLE KEYS */;
-/*!40000 ALTER TABLE `creditCard` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `gender`
@@ -196,15 +166,6 @@ CREATE TABLE `gender` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `gender`
---
-
-LOCK TABLES `gender` WRITE;
-/*!40000 ALTER TABLE `gender` DISABLE KEYS */;
-/*!40000 ALTER TABLE `gender` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `user`
@@ -235,15 +196,6 @@ CREATE TABLE `user` (
   CONSTRAINT `user_ibfk_3` FOREIGN KEY (`IDcar`) REFERENCES `car` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user`
---
-
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -254,4 +206,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-08 16:05:46
+-- Dump completed on 2021-06-08 19:43:09

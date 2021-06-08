@@ -39,7 +39,7 @@ RUNNING THE PROGRAM
 	("pip install tkinter:" and "pip install PIL" in case they don't work "out of the box" )
 	
 
-2.To run our code you must compile "appMain" with Python 3.8.4+
+2.To run our code you must compile "reCharge.py" with Python 3.8.4+
    (May work with older versions of Python 3 too.)
 
 3. reCharge has GUI (graphical user interface) and is operated using mouse. 
@@ -48,7 +48,7 @@ RUNNING THE PROGRAM
 In case there is no data shown on the map it means that no charger fits the given criteria in the area.
 (dots representing the locations can still be found on the graph although without the map underneath due to the limitation of .png photo file)
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-ReCharge is an addition to the mockup app "reCharge" that can be found and tested here:
+ReCharge.pyxw is an addition to the mockup app "reCharge" that can be found and tested here:
 
 https://xd.adobe.com/view/c5ea2002-3557-4928-976d-1f96d6275278-90b9/
 

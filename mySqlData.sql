@@ -1,6 +1,4 @@
---It's a 1 to 1 export from our database which consists of many different files we created 
-
-
+use reCharge;
 -- MySQL dump 10.13  Distrib 8.0.22, for macos10.15 (x86_64)
 --
 -- Host: localhost    Database: reCharge
@@ -34,8 +32,17 @@ UNLOCK TABLES;
 
 LOCK TABLES `chargings` WRITE;
 /*!40000 ALTER TABLE `chargings` DISABLE KEYS */;
-INSERT INTO `chargings` VALUES (1,4,300,2,'2021-03-21 20:20:10','2021-03-21 22:40:10','135DKK','23kWh',1),(2,2,237,3,'2021-04-13 16:22:30','2021-05-13 17:53:30','110','20kWH',0),(3,3,123,4,'2021-04-13 13:57:30','2021-04-13 14:30:04','83','17kwH',0),(4,1,25,1,'2021-05-13 16:22:30','2021-05-14 07:45:26','260','39kWh',5),(5,1,64,1,'2021-05-18 23:22:30','2021-05-19 08:02:30','180','28kWh',3);
+INSERT INTO `chargings` VALUES (1,4,300,2,'2021-03-21 20:20:10','2021-03-21 22:40:10',135,'23kWh',1),(2,2,237,3,'2021-04-13 16:22:30','2021-05-13 17:53:30',110,'20kWH',0),(3,3,123,4,'2021-04-13 13:57:30','2021-04-13 14:30:04',83,'17kwH',0),(4,1,25,1,'2021-05-13 16:22:30','2021-05-14 07:45:26',260,'39kWh',5),(5,1,64,1,'2021-05-18 23:22:30','2021-05-19 08:02:30',180,'28kWh',3);
 /*!40000 ALTER TABLE `chargings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `chargingStations`
+--
+
+LOCK TABLES `chargingStations` WRITE;
+/*!40000 ALTER TABLE `chargingStations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chargingStations` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -44,7 +51,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `creditCard` WRITE;
 /*!40000 ALTER TABLE `creditCard` DISABLE KEYS */;
-INSERT INTO `creditCard` VALUES (1,'4556 6988 2155 7171','10/2025',888),(2,'5212 9205 0903 1011','1/2023',708),(3,'4929 9509 7345 0311','2/2022',740),(4,'5454 1816 8478 5734','4/2023',600);
+INSERT INTO `creditCard` VALUES (1,'4556 6988 2155 7171',1,'10/2025',888),(2,'5212 9205 0903 1011',2,'1/2023',708),(3,'4929 9509 7345 0311',2,'2/2022',740),(4,'5454 1816 8478 5734',4,'4/2023',600);
 /*!40000 ALTER TABLE `creditCard` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,4 +84,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-08 18:21:18
+-- Dump completed on 2021-06-08 19:44:29
