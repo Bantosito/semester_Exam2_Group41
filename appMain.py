@@ -10,7 +10,7 @@ from sqlalchemy import create_engine #Library used to establish connection with 
 # Data used to establish connection with the database
 
 user = 'root'       #PLEASE LEAVE IF USING DIFFERENT THAN LOCAL MYSQL SERVER
-passw = '<Your Password>' #!!!PLEASE CHANGE THE PASSWORD TO THE PASSWORD OF YOUR DATABASE Server!!!!
+passw = 'Bantos 180' #!!!PLEASE CHANGE THE PASSWORD TO THE PASSWORD OF YOUR DATABASE Server!!!!
 host = 'localhost' #PLEASE LEAVE IF USING DIFFERENT THAN LOCAL MYSQL SERVER
 port = 3306        #PLEASE LEAVE IF USING DIFFERENT THAN LOCAL MYSQL SERVER
 database = 'reCharge' #Name of the database that is created while executing

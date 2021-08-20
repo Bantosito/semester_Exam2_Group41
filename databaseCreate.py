@@ -11,7 +11,7 @@ import pandas as pd # Library used to load and handle csv file as well as send t
 from sqlalchemy import create_engine #Library used to establish connection with the database, Does the same purpose as Mysql.connector
 
 user = 'root'       #PLEASE LEAVE IF USING DIFFERENT THAN LOCAL MYSQL SERVER
-passw = '<Your Password>' #!!!PLEASE CHANGE THE PASSWORD TO THE PASSWORD OF YOUR DATABASE Server!!!!
+passw = 'Bantos 180' #!!!PLEASE CHANGE THE PASSWORD TO THE PASSWORD OF YOUR DATABASE Server!!!!
 host = 'localhost' #PLEASE LEAVE IF USING DIFFERENT THAN LOCAL MYSQL SERVER
 port = 3306        #PLEASE LEAVE IF USING DIFFERENT THAN LOCAL MYSQL SERVER
 database = 'reCharge' 
